@@ -15,7 +15,7 @@ public class FruitTest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String[] testArray = {"Orange", "Apple", "Orange", "Apple", "Orange", "Orange"};
+        String[] testArray = {"Orange", "Apple", "Orange", "Orange", "Apple", "Apple", "Apple", "Apple", "Apple"};
         Cart testCart = new Cart(testArray);
         //System.out.println(testCart.getTotal());
         testCart.printTotal();

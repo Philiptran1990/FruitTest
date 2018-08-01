@@ -16,7 +16,7 @@ public class Item {
         
     }
     
-    public double addPrice(double total){
+    public double addPrice(double total, int quantity){
         return total += price;
     }
 }

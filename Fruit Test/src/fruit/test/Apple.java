@@ -11,10 +11,26 @@ package fruit.test;
  */
 public class Apple extends Item{
     private double price = 0.60;
+    private boolean specialOffer;
+
+    public boolean isSpecialOffer() {
+        return specialOffer;
+    }
+
+    public void setSpecialOffer(boolean specialOffer) {
+        this.specialOffer = specialOffer;
+    }
+    
     public Apple (){
         
     }
-        public double addPrice(double total){
-        return total += price;
+        public double addPrice(double total, int quantity){
+        if (quantity % 2 != 0){
+            return total += price;
+        }
+        return total;
+        
+        
     }
+        
 }

@@ -15,6 +15,8 @@ import java.util.HashMap;
 public class Cart {
    private HashMap<Item, Integer> items = new HashMap<Item, Integer>();
    private double total = 0;
+   Orange orange = new Orange();
+   Apple apple = new Apple();
     
    public Cart (String[] scannedItems){
        if (scannedItems == null || scannedItems.length == 0){
@@ -28,10 +30,10 @@ public class Cart {
    
    private Item checkString(String itemString){
        if (itemString.equals("Orange")){  
-                   Orange orange = new Orange();
+                   
                    return orange;
                } else if (itemString.equals("Apple")){
-                   Apple apple = new Apple();
+                   
                    return apple;
                } else {
                    System.out.println("Not a valid item");
@@ -46,10 +48,10 @@ public class Cart {
    public void addItem(Item newItem){
        if (items.containsKey(newItem)){
            items.put(newItem, items.get(newItem)+1);
-            total = newItem.addPrice(total);
+           total = newItem.addPrice(total, items.get(newItem));
        } else {
            items.put(newItem, 1);
-           total = newItem.addPrice(total);
+           total = newItem.addPrice(total, items.get(newItem));
        }
    }
    

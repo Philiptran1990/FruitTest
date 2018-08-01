@@ -10,13 +10,14 @@ package fruit.test;
  * @author phitran
  */
 public class Item {
+
     double price;
-    
-    public Item (){
-        
+
+    public Item() {
+
     }
-    
-    public double addPrice(double total, int quantity){
+
+    public double addPrice(double total, int quantity) {
         return total += price;
     }
 }

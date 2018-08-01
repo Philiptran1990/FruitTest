@@ -25,10 +25,10 @@ public class Apple extends Item{
         
     }
         public double addPrice(double total, int quantity){
-        if (quantity % 2 != 0){
-            return total += price;
-        }
-        return total;
+            if (quantity % 2 != 0) {
+                return total += price;
+            }
+            return total;
         
         
     }
